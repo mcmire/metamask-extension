@@ -122,7 +122,6 @@ const AddNetwork = ({
                   <img
                     className="add-network__warning-image"
                     src="images/warning-triangle-grey.svg"
-                    alt=""
                   />
                 </Tooltip>
               )}

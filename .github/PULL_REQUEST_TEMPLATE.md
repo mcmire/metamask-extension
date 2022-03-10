@@ -1,5 +1,7 @@
+## Description
+
 <!--
-This top part is a freeform area, but there are 3 questions you should try to answer:
+This is a freeform area, but there are 3 questions you should try to answer:
 
 * What information do reviewers need to have in order to understand your changes?
 * What is the current state of things and why does it need to change?
@@ -18,11 +20,11 @@ In order to solve this problem, ...
 
 ### Before
 
-<!-- How did the UI you changed look before your changes? -->
+<!-- How did the UI you changed look before your changes? Drag your file(s) below: -->
 
 ### After
 
-<!-- How does it look now? -->
+<!-- How does it look now? Drag your file(s) below: -->
 
 ## Manual testing steps
 
@@ -34,6 +36,6 @@ In order to solve this problem, ...
 
 ## More information
 
-<!-- Use this space to list related issues and links to Slack conversations, Zendesk issues, etc. -->
+<!-- Any related issues or links to Slack conversations, Zendesk issues, etc. reviewers should consult to understand this pull request better? -->
 
 * Fixes #999999999999999999

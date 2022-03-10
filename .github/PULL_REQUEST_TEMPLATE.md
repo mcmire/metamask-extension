@@ -6,6 +6,8 @@ This is a freeform area, but there are 3 questions you should try to answer:
 * What information do reviewers need to have in order to understand your changes?
 * What is the current state of things and why does it need to change?
 * What is the solution your changes offer?
+
+(Hint: all of this should ideally go in your commit message so that people don't have to find this pull request in the future ;))
 -->
 
 Currently, ...

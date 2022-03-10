@@ -1,8 +1,39 @@
-Fixes: #
+<!--
+This top part is a freeform area, but there are 3 questions you should try to answer:
 
-Explanation:  
+* What information do reviewers need to have in order to understand your changes?
+* What is the current state of things and why does it need to change?
+* What is the solution your changes offer?
+-->
 
-Manual testing steps:  
-  - 
-  - 
-  - 
+Currently, ...
+
+This is a problem because ...
+
+In order to solve this problem, ...
+
+## Screenshots/Screencaps
+
+<!-- If you're making a change to the UI, make sure to capture a screenshot or a short video showing off your work! -->
+
+### Before
+
+<!-- How did the UI you changed look before your changes? -->
+
+### After
+
+<!-- How does it look now? -->
+
+## Manual testing steps
+
+<!-- How should reviewers and QA manually test your changes? -->
+
+- Go to this screen
+- Do this
+- Then do this
+
+## More information
+
+<!-- Use this space to list related issues and links to Slack conversations, Zendesk issues, etc. -->
+
+* Fixes #999999999999999999

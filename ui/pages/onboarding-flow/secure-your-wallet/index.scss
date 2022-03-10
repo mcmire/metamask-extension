@@ -4,16 +4,47 @@
   align-items: center;
   flex-direction: column;
   max-width: 1000px;
-  max-height: 1300px;
+
+  @media screen and (min-width: $break-large) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: $break-small) {
+    padding: 32px;
+  }
 
   &__details {
     max-width: 550px;
     padding-inline-end: 10px;
   }
 
+  &__video {
+    @media screen and (max-width: $break-small) {
+      max-width: 396px;
+    }
+  }
+
   &__actions {
+    width: 78%;
+
+    @media screen and (max-width: $break-small) {
+      flex-direction: column;
+      width: 100%;
+    }
+
     button {
-      margin: 16px;
+      margin-bottom: 16px;
+
+      @media screen and (min-width: $break-large) {
+        margin: 16px;
+      }
+    }
+  }
+
+  &__desc {
+    @media screen and (min-width: $break-large) {
+      margin-inline-start: 50px;
     }
   }
 

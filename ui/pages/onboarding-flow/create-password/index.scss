@@ -4,8 +4,15 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    max-width: 600px;
+    max-width: 800px;
     max-height: 750px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $break-large) {
+      margin-top: 40px;
+      margin-bottom: 170px;
+    }
   }
 
   &__link-text {
@@ -13,7 +20,10 @@
   }
 
   &__form {
-    padding: 0 24px;
+    @media screen and (min-width: $break-large) {
+      padding: 0 198px;
+    }
+
 
     &--password-button {
       background-color: transparent;

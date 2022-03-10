@@ -1,8 +1,18 @@
 .recovery-phrase {
   max-width: 600px;
 
+  @media screen and (min-width: $break-large) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
   &__tips {
     flex-direction: column;
+    margin-inline-start: 27px;
+
+    @media screen and (min-width: $break-large) {
+      margin-inline-start: 48px;
+    }
 
     ul {
       list-style: disc;
@@ -12,10 +22,14 @@
 
   &__chips {
     display: grid;
-    grid-template-columns: 190px 190px 190px;
+    grid-template-columns: 166px 166px 166px;
     justify-items: center;
     align-items: center;
     row-gap: 16px;
+
+    @media screen and (max-width: $break-small) {
+      grid-template-columns: 181px 181px;
+    }
 
     &--hidden {
       filter: blur(5px);
@@ -24,6 +38,13 @@
 
   &__secret {
     position: relative;
+    margin-inline-start: 23px;
+    margin-inline-end: 23px;
+
+    @media screen and (min-width: $break-large) {
+      margin-inline-start: 43px;
+      margin-inline-end: 43px;
+    }
   }
 
   &__secret-blocker {
@@ -63,9 +84,17 @@
     justify-content: center;
     align-items: center;
 
+    @media screen and (max-width: $break-small) {
+      margin-inline-start: 40px;
+      margin-inline-end: 40px;
+      margin-bottom: 40px;
+    }
+
     &--button {
-      width: 50%;
-      padding: 20px;
+      @media screen and (min-width: $break-large) {
+        width: 50%;
+        padding: 20px;
+      }
     }
 
     &--copy {
@@ -86,6 +115,11 @@
         color: var(--primary-blue);
         cursor: pointer;
         margin-bottom: 24px;
+
+        @media screen and (max-width: $break-small) {
+          justify-content: center;
+          width: 100%;
+        }
 
         svg {
           width: 15px;
@@ -113,6 +147,13 @@
       border-width: 2px;
       border-radius: 13px;
       height: 32px;
+    }
+  }
+
+  &__confirm {
+    @media screen and (min-width: $break-large) {
+      margin-top: 40px;
+      margin-bottom: 40px;
     }
   }
 }

@@ -4,6 +4,11 @@
   justify-content: space-evenly;
   width: 500px;
   margin: 0 auto;
+
+  @media screen and (max-width: $break-small) {
+    width: 331px;
+    justify-content: space-between;
+  }
 }
 
 ul.two-steps {
@@ -71,6 +76,16 @@ ul.two-steps {
 
   [dir='rtl'] & {
     color: var(--primary-blue);
+  }
+
+  @media screen and (max-width: $break-small) {
+    width: 37%;
+  }
+}
+
+.progressbar li.two-steps {
+  @media screen and (max-width: $break-small) {
+    width: 39%;
   }
 }
 

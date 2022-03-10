@@ -1,8 +1,26 @@
 .onboarding-metametrics {
-  width: 600px;
+  @media screen and (max-width: $break-small) {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 25px;
+  }
+
+  @media screen and (min-width: $break-large) {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 48px;
+  }
 
   ul {
     margin: 24px 0 0 0;
+
+    @media screen and (min-width: $break-large) {
+      margin-inline-start: 200px;
+      margin-inline-end: 183px;
+    }
 
     li {
       padding-bottom: 20px;
@@ -29,13 +47,31 @@
   }
 
   &__buttons {
-    margin: 24px auto 0 auto;
-    justify-content: space-between;
+    justify-content: space-around;
     display: flex;
 
+    @media screen and (min-width: $break-large) {
+      margin-bottom: 103px;
+      margin-top: 40px;
+    }
+
+    &__no-thanks {
+      @media screen and (min-width: $break-large) {
+        margin-inline-end: 96px;
+      }
+    }
+
+    @media screen and (max-width: $break-small) {
+      margin-top: 24px;
+    }
+
     button {
-      margin-bottom: 24px;
       width: 200px;
+
+      @media screen and (max-width: $break-small) {
+        width: 153px;
+        margin-bottom: 24px;
+      }
     }
   }
 }

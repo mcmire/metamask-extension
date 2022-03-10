@@ -54,7 +54,7 @@ export default function ConfirmRecoveryPhrase({ secretRecoveryPhrase = '' }) {
   };
 
   return (
-    <div>
+    <div className="recovery-phrase__confirm">
       <ThreeStepProgressBar stage={threeStepStages.RECOVERY_PHRASE_CONFIRM} />
       <Box
         justifyContent={JUSTIFY_CONTENT.CENTER}

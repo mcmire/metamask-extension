@@ -26,7 +26,7 @@ const AddNetwork = ({
 }) => {
   const t = useContext(I18nContext);
 
-  const regexp = /infura.io/u;
+  const infuraRegex = /infura.io/u;
 
   const nets = featuredRPCS
     .sort((a, b) => (a.ticker > b.ticker ? 1 : -1))
@@ -89,7 +89,7 @@ const AddNetwork = ({
               </IconBorder>
               <Typography
                 variant={TYPOGRAPHY.H7}
-                color={COLORS.BLACK}
+                color={COLORS.TEXT_DEFAULT}
                 fontWeight={FONT_WEIGHT.BOLD}
                 boxProps={{ marginLeft: 2 }}
               >
@@ -97,34 +97,37 @@ const AddNetwork = ({
               </Typography>
             </Box>
             <Box display={DISPLAY.FLEX} alignItems={ALIGN_ITEMS.CENTER}>
-              {!regexp.test(item.rpcUrl) && (
-                <Tooltip
-                  className="add-network__warning-tooltip"
-                  position="top"
-                  interactive
-                  html={
-                    <Box margin={3} className="add-network__warning-tooltip">
-                      {t('addNetworkTooltipWarning', [
-                        <a
-                          key="zendesk_page_link"
-                          href="https://metamask.zendesk.com/hc/en-us/articles/4417500466971"
-                          rel="noreferrer"
-                          target="_blank"
-                        >
-                          {t('learnMoreUpperCase')}
-                        </a>,
-                      ])}
-                    </Box>
-                  }
-                  trigger="mouseenter"
-                  theme="light"
-                >
-                  <img
-                    className="add-network__warning-image"
-                    src="images/warning-triangle-grey.svg"
-                  />
-                </Tooltip>
-              )}
+              {
+                // Warning for the networks that doesn't use infura.io as the RPC
+                !infuraRegex.test(item.rpcUrl) && (
+                  <Tooltip
+                    className="add-network__warning-tooltip"
+                    position="top"
+                    interactive
+                    html={
+                      <Box margin={3} className="add-network__warning-tooltip">
+                        {t('addNetworkTooltipWarning', [
+                          <a
+                            key="zendesk_page_link"
+                            href="https://metamask.zendesk.com/hc/en-us/articles/4417500466971"
+                            rel="noreferrer"
+                            target="_blank"
+                          >
+                            {t('learnMoreUpperCase')}
+                          </a>,
+                        ])}
+                      </Box>
+                    }
+                    trigger="mouseenter"
+                    theme="light"
+                  >
+                    <img
+                      className="add-network__warning-image"
+                      src="images/warning-triangle-grey.svg"
+                    />
+                  </Tooltip>
+                )
+              }
               <div
                 className="add-network__add-button"
                 onClick={onAddNetworkClick}

@@ -1,0 +1,12 @@
+diff --git a/node_modules/@metamask/snap-controllers/dist/snaps/SnapController.js b/node_modules/@metamask/snap-controllers/dist/snaps/SnapController.js
+index 72d00f7..0dd8f30 100644
+--- a/node_modules/@metamask/snap-controllers/dist/snaps/SnapController.js
++++ b/node_modules/@metamask/snap-controllers/dist/snaps/SnapController.js
+@@ -810,6 +810,7 @@ class SnapController extends controllers_1.BaseControllerV2 {
+                     reject(new Error('The request timed out.'));
+                 }, this._maxRequestTime);
+             });
++            request.jsonrpc = '2.0';
+             // This will either get the result or reject due to the timeout.
+             const result = await Promise.race([
+                 handler(origin, request),
